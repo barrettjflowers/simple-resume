@@ -1,20 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Resume</title>
-   <link rel="stylesheet" href="style.css">
+
+   <style>
+body {
+   font-family: Menlo, sans-serif;
+   line-height: 1.5;
+   color: #333;
+   background-color: white;
+   margin: 0;
+   padding: 20px;
+   font-variant-emoji: text;
+}
+
+a {
+   color: #f2b261;
+   text-decoration: none;
+}
+#resume {
+   border: 1px solid #f2b261;
+   max-width: 800px;
+   background: #f7e8d5;
+   padding: 40px;
+   margin: auto;
+   border-radius: 4px;
+   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* Header */
+header {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+header h1 {
+   margin: 0;
+   color: #222;
+   font-size: 2em;
+}
+
+header p {
+   margin: 5px 0;
+   font-size: 1.1em;
+   color: #555;
+}
+
+header a {
+   color: #f2b261;
+   text-decoration: none;
+}
+
+header a:hover {
+   text-decoration: underline;
+}
+
+/* Sections */
+section {
+   margin-bottom: 20px;
+}
+
+h2 {
+   color: #222;
+   border-bottom: 2px solid #f2b261;
+   padding-bottom: 5px;
+   margin-bottom: 10px;
+}
+
+h3 {
+   color: #333;
+   margin-bottom: 5px;
+}
+
+ul {
+   list-style-type: disc;
+   padding-left: 20px;
+}
+
+li {
+   margin: 5px 0;
+}
+
+/* Footer */
+footer {
+   position: static;
+   text-align: center;
+   padding: 5px;
+   font-size: 0.9em;
+   background-color: #333;
+   color: white;
+   border-radius: 4px;
+}
+
+footer a {
+   color: #f2b261;
+   text-decoration: none;
+   margin: 0 5px;
+}
+
+footer a:hover {
+   text-decoration: underline;
+}
+   </style>
+
 </head>
 
 <body>
    <div id="resume">
       <header>
          <h1>Barrett Flowers</h1>
-         <p> Software Development | Tech Team | Help Desk at <a href="https://indyhost.net/">Indyhost.net Inc.</a>
+		 <p> Software Development | Tech Team | Help Desk at <a href="https://indyhost.net/">Indyhost.net Inc.</a></p>
 		 <p>✈ Greater Indianapolis Area › barrettjflowers@gmail.com</p>
-         </p>
       </header>
       <section>
 		 <p>
@@ -27,9 +125,8 @@
       <section>
          <h2>→ work experience</h2>
          <ul>
-            <h3>Indyhost.net Inc.</h3>
-            <p>Indianapolis, IN</p>
-            <p>2021 - Present</p>
+            <h3>Indyhost.net, Inc.</h3>
+			<p><em>2021 - Present</em></p>
             <li>Develop *nix-based automation tools to streamline internal workflows and reduce manual processes.</li>
             <li>Build and debug Chrome extensions supporting POS systems and dual-pricing label integrations.</li>
             <li>Migrate and maintain local and cloud-hosted servers, including WordPress environments.</li>
@@ -37,22 +134,31 @@
 			<li>Install and configure POS hardware and software solutions for client environments.</li>
 			<li>Provide cross-functional support spanning development, QA testing, and technical troubleshooting for clients.</li>
             <h3>Barrett Flowers Freelance Photography</h3>
-            <p>2017 - Present</p>
-            <p>Several events, proms, meetings. Family photos and senior photos.
+			<p><em>2017 - Present</em></p>
+            <li>Photographed a variety of events including
+				proms, business conferences, family and senior photos.
                Authentic and real moments, beautiful landscapes and even film photography.
             </p>
-			<li><a href="https://barrettjflowers.net/work/">Portfolio</a>
+			<li>See my <a href="https://barrettjflowers.net/work/">Portfolio.</a>
          </ul>
       </section>
+	  <section>
+		  <ul>
+			<h3>Low Voltage Installations</h3>
+			<p><em>2020 - 2021</em></p>
+			<li>Install and configure low voltage systems for commercial applications.</li>
+			<li>Install PoE appliances, network switches, security cameras, and more.</li>
+		  </section>
       <section>
          <h2>→ education</h2>
          <ul>
             <h3>Purdue Polytechnic</h3>
-            <p>2019 - 2021</p>
-            <li>CNIT 15500</li>
-            <li>CNIT 27200</li>
-            <li>OLS 27400</li>
-            <h3>Courses and Certifications</h3>
+			<p><em>2019 - 2021</em></p>
+            <li>CNIT 15500 | Object-Oriented Programming</li>
+            <li>CNIT 15501 | Software Development Concepts</li>
+            <li>CNIT 27200 | Database Fundamentals</li>
+            <li>OLS 27400 | Applied Leadership</li>
+            <h3>Certifications</h3>
             <li> <a href="https://www.coursera.org/account/accomplishments/verify/LJYM8J43ZHJS">Crash Course on Python
                </a></li>
             <li><a href="https://www.coursera.org/account/accomplishments/verify/MZV3ZDUR6XR9">Technical Support
@@ -62,14 +168,21 @@
       <section>
          <h2>→ skills</h2>
          <ul>
-            <li>Bash</li>
-            <li>Video Color Grading and Post Production</li>
-            <li>JavaScript, React, Svelte</li>
-            <li>Python, Pygame</li>
+			<h3>Computer Science</h3>
+            <li>Bash / Zsh</li>
+            <li>JavaScript (React, Svelte)</li>
+            <li>Rust (Leptos, Axum, Teloxide)</li>
+            <li>Python (Pygame)</li>
+            <li>Java (JavaFX)</li>
+
+			<h3>DevOps Tooling</h3>
             <li>Docker</li>
             <li>Git</li>
-            <li>Java, Javafx</li>
-            <li>Rust, Leptos and Axum</li>
+            <li>Terraform</li>
+
+			<h3>Media</h3>
+            <li>Video Color Grading and Post Production (Adobe Premiere, DaVinci Resolve)</li>
+            <li>Photo Post Production (Adobe Lightroom)</li>
       </section>
       <section>
          <h2>→ projects</h2>
@@ -77,30 +190,32 @@
             <li><a href="https://github.com/barrettjflowers/bookzf">Bookzf</a></li>
             <li><a href="https://github.com/barrettjflowers/gravesite-locator">Gravesite Locator for CNIT 27200</a></li>
             <li><a href="https://github.com/barrettjflowers/dragonfly">Dragonfly</a></li>
-			<li><a href="https://www.youtube.com/watch?v=nFdbLP1-OHc">take a moment to breathe.</a></li>
+			<li><a href="https://www.youtube.com/watch?v=nFdbLP1-OHc">take a moment to breathe</a></li>
             <li><a href="https://indyhost.net/indygateway/">IndyGateway Software Installer</a></li>
             <li><a href="https://indyhost.net/indygateway/">IndyGateway Device Extension</a></li>
             <li><a href="https://indyhost.net/indygateway/">IndyGateway Pax Connector</a></li>
          </ul>
       </section>
 	  <section>
-         <h2>→ references</h3>
-         <p>Michael Heien › (402) 679-4677 | Coworker, mentor and friend.</p> 
-         <p>Luke Lechel › (260) 710-0864 | Colleague, friend.</p> 
-		 <br>
+		  <h2>→ references</h2>
+		 <ul>
+			 <li>Michael Heien › (402) 679-4677 | Coworker, mentor, and friend.</li> 
+			 <li>Luke Lechel › (260) 710-0864 | Colleague and friend.</li> 
+			 <li>Jonathan Montgomery › (765) 640-8797 | Mentor.</li>
+		 </ul>
 	  </section>
-         <p>"You got the makings of greatness in you, but you gotta take the helm and chart your own course! Stick to
+	  <section>
+			  <p><small><em>"You got the makings of greatness in you, but you gotta take the helm and chart your own course! Stick to
             it, no matter the squalls! And when the time comes, you'll get the chance to really test the cut of your
             sails and show what you're made of! And... well, I hope I'm there, catching some of the light coming off you
-            that day." - John Silver, Treasure Planet</p>
+			that day."</em> -Silver, Treasure Planet</small></p>
+		 </section>
 <footer>
    <p><a href="https://barrettjflowers.net">barrettjflowers.net</a> <a
          href="https://github.com/barrettjflowers/">github.com/barrettjflowers </a>
       <a href="https://www.linkedin.com/in/barrettjflowers/">linkedin.com/in/barrettjflowers </a>
-      </a>
    </p>
 </footer>
    </div>
 </body>
-
 </html>
