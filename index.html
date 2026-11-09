@@ -6,8 +6,10 @@
    <title>Resume</title>
 
    <style>
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.3.0/index.css');
+
 body {
-   font-family: Menlo, sans-serif;
+   font-family: Iosevka, Menlo, monospace;
    line-height: 1.5;
    color: #333;
    background-color: white;
@@ -21,13 +23,11 @@ a {
    text-decoration: none;
 }
 #resume {
-   border: 1px solid #f2b261;
    max-width: 800px;
    background: #f7e8d5;
    padding: 40px;
    margin: auto;
-   border-radius: 4px;
-   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.35);
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Header */
@@ -91,7 +91,6 @@ footer {
    font-size: 0.9em;
    background-color: #333;
    color: white;
-   border-radius: 4px;
 }
 
 footer a {
@@ -103,16 +102,46 @@ footer a {
 footer a:hover {
    text-decoration: underline;
 }
+
+/* Download button */
+#download {
+   display: block;
+   max-width: 800px;
+   margin: 0 auto 12px;
+   text-align: right;
+}
+
+#download button {
+   font: inherit;
+   background: #333;
+   color: #f2b261;
+   border: none;
+   padding: 6px 14px;
+   cursor: pointer;
+}
+
+#download button:hover {
+   background: #222;
+}
+
+@media print {
+   @page { margin: 0; }
+   body { padding: 0; background: #f7e8d5; }
+   #download { display: none; }
+   #resume { box-shadow: none; max-width: none; }
+   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
    </style>
 
 </head>
 
 <body>
+   <div id="download"><button onclick="window.print()">Download PDF</button></div>
    <div id="resume">
       <header>
          <h1>Barrett Flowers</h1>
-		 <p> Software Development | Tech Team | Help Desk at <a href="https://indyhost.net/">Indyhost.net Inc.</a></p>
-		 <p>✈ Greater Indianapolis Area › barrettjflowers@gmail.com</p>
+		 <p> Software Development | Tech Team at <a href="https://indyhost.net/">Indyhost.net Inc.</a></p>
+		 <p>✈ Greater Indianapolis Area | mail@barrettjflowers.dev | <a href="https://barrettjflowers.dev">barrettjflowers.dev</a></p>
       </header>
       <section>
 		 <p>
@@ -123,34 +152,27 @@ footer a:hover {
 		 and collaboration are integral to meaningful results.
       </section>
       <section>
-         <h2>→ work experience</h2>
+         <h2>work experience</h2>
+         <h3>Indyhost.net, Inc.</h3>
+         <p><em>2021 - Present</em></p>
          <ul>
-            <h3>Indyhost.net, Inc.</h3>
-			<p><em>2021 - Present</em></p>
-            <li>Develop *nix-based automation tools to streamline internal workflows and reduce manual processes.</li>
-            <li>Build and debug Chrome extensions supporting POS systems and dual-pricing label integrations.</li>
-            <li>Migrate and maintain local and cloud-hosted servers, including WordPress environments.</li>
-			<li>Develop and deploy JVM-based credit card terminal proxy service (IndyGateway Pax Connector).</li>
-			<li>Install and configure POS hardware and software solutions for client environments.</li>
-			<li>Provide cross-functional support spanning development, QA testing, and technical troubleshooting for clients.</li>
-            <h3>Barrett Flowers Freelance Photography</h3>
-			<p><em>2017 - Present</em></p>
-            <li>Photographed a variety of events including
-				proms, business conferences, family and senior photos.
-               Authentic and real moments, beautiful landscapes and even film photography.
-            </p>
-			<li>See my <a href="https://barrettjflowers.net/work/">Portfolio.</a>
+            <li>Build and maintain CI/CD pipelines with agentic workflows for automated QA testing and deployments.</li>
+            <li>Build and deploy a JVM-based credit card terminal proxy service (Indygateway Pax Connector).</li>
+            <li>Develop *nix-based automation tools that streamline internal workflows and reduce manual processes.</li>
+            <li>Build and debug Chrome extensions for POS systems and dual-pricing label integrations.</li>
+            <li>Migrate and maintain local and cloud-hosted servers, including WordPress environments; install POS systems and support clients across development, QA, and troubleshooting.</li>
          </ul>
+         <h3>Low Voltage Installations</h3>
+         <p><em>2020 - 2021</em></p>
+         <ul>
+            <li>Install and configure low voltage systems for commercial applications.</li>
+            <li>Install PoE appliances, network switches, security cameras, and more.</li>
+         </ul>
+         <h3>Freelance Photography</h3>
+         <p><em>2017 - Present</em> · <a href="https://barrettjflowers.dev/vault/photography.html#1">Portfolio</a></p>
       </section>
-	  <section>
-		  <ul>
-			<h3>Low Voltage Installations</h3>
-			<p><em>2020 - 2021</em></p>
-			<li>Install and configure low voltage systems for commercial applications.</li>
-			<li>Install PoE appliances, network switches, security cameras, and more.</li>
-		  </section>
       <section>
-         <h2>→ education</h2>
+         <h2>education</h2>
          <ul>
             <h3>Purdue Polytechnic</h3>
 			<p><em>2019 - 2021</em></p>
@@ -166,42 +188,27 @@ footer a:hover {
          </ul>
       </section>
       <section>
-         <h2>→ skills</h2>
-         <ul>
-			<h3>Computer Science</h3>
-            <li>Bash / Zsh</li>
-            <li>JavaScript (React, Svelte)</li>
-            <li>Rust (Leptos, Axum, Teloxide)</li>
-            <li>Python (Pygame)</li>
-            <li>Java (JavaFX)</li>
-
-			<h3>DevOps Tooling</h3>
-            <li>Docker</li>
-            <li>Git</li>
-            <li>Terraform</li>
-
-			<h3>Media</h3>
-            <li>Video Color Grading and Post Production (Adobe Premiere, DaVinci Resolve)</li>
-            <li>Photo Post Production (Adobe Lightroom)</li>
+         <h2>skills</h2>
+         <p><strong>Languages:</strong> Rust, Java, JavaScript, Python, Bash</p>
+         <p><strong>Frameworks:</strong> React, Svelte, Leptos, Axum, JavaFX</p>
+         <p><strong>DevOps:</strong> CI/CD, Agentic QA &amp; Deploys, Docker, Terraform, Git</p>
+         <p><strong>Media:</strong> DaVinci Resolve, Kdenlive, Premiere, Lightroom</p>
       </section>
       <section>
-         <h2>→ projects</h2>
+         <h2>projects</h2>
          <ul>
-            <li><a href="https://github.com/barrettjflowers/betterpwa">BetterPWA</a></li>
-            <li><a href="https://github.com/barrettjflowers/gravesite-locator">Gravesite Locator for CNIT 27200</a></li>
+            <li><a href="https://indyhost.net/indygateway/">Indygateway</a></li>
             <li><a href="https://github.com/barrettjflowers/biblia.ctx">Biblia.ctx</a></li>
-			<li><a href="https://www.youtube.com/watch?v=nFdbLP1-OHc">take a moment to breathe</a></li>
-            <li><a href="https://indyhost.net/indygateway/">IndyGateway Software Installer</a></li>
-            <li><a href="https://indyhost.net/indygateway/">IndyGateway Device Extension</a></li>
-            <li><a href="https://indyhost.net/indygateway/">IndyGateway Pax Connector</a></li>
+            <li><a href="https://github.com/barrettjflowers/betterpwa">BetterPWA</a></li>
+            <li><a href="https://github.com/barrettjflowers/gravesite-locator">Gravesite Locator</a></li>
          </ul>
       </section>
 	  <section>
-		  <h2>→ references</h2>
+		  <h2>references</h2>
 			<p><em>Available upon request</em></p>
 	  </section>
 <footer>
-   <p><a href="https://barrettjflowers.net">barrettjflowers.net</a> <a
+   <p><a href="https://barrettjflowers.dev">barrettjflowers.dev</a> <a
          href="https://github.com/barrettjflowers/">github.com/barrettjflowers </a>
       <a href="https://www.linkedin.com/in/barrettjflowers/">linkedin.com/in/barrettjflowers </a>
    </p>
