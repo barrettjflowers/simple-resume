@@ -8,26 +8,38 @@
    <style>
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.3.0/index.css');
 
+/* light palette from barrettjflowers.dev (~/.config/colors/colors.sh) */
+:root {
+   --bg: #d4ccb9;
+   --surface: #bfb8a7;
+   --text: #45363b;
+}
+
 body {
    font-family: Iosevka, Menlo, monospace;
    line-height: 1.5;
-   color: #333;
-   background-color: white;
+   color: var(--text);
+   background-color: var(--surface);
    margin: 0;
    padding: 20px;
    font-variant-emoji: text;
 }
 
 a {
-   color: #f2b261;
-   text-decoration: none;
+   color: var(--text);
+   text-decoration: underline;
 }
+
+a:hover {
+   background-color: var(--surface);
+}
+
 #resume {
    max-width: 800px;
-   background: #f7e8d5;
+   background: var(--bg);
+   border: 1px solid var(--text);
    padding: 40px;
    margin: auto;
-   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Header */
@@ -38,23 +50,12 @@ header {
 
 header h1 {
    margin: 0;
-   color: #222;
    font-size: 2em;
 }
 
 header p {
    margin: 5px 0;
    font-size: 1.1em;
-   color: #555;
-}
-
-header a {
-   color: #f2b261;
-   text-decoration: none;
-}
-
-header a:hover {
-   text-decoration: underline;
 }
 
 /* Sections */
@@ -63,14 +64,12 @@ section {
 }
 
 h2 {
-   color: #222;
-   border-bottom: 2px solid #f2b261;
+   border-bottom: 2px solid var(--text);
    padding-bottom: 5px;
    margin-bottom: 10px;
 }
 
 h3 {
-   color: #333;
    margin-bottom: 5px;
 }
 
@@ -89,18 +88,18 @@ footer {
    text-align: center;
    padding: 5px;
    font-size: 0.9em;
-   background-color: #333;
-   color: white;
+   background-color: var(--text);
+   color: var(--bg);
 }
 
 footer a {
-   color: #f2b261;
-   text-decoration: none;
+   color: var(--bg);
    margin: 0 5px;
 }
 
 footer a:hover {
-   text-decoration: underline;
+   background-color: var(--bg);
+   color: var(--text);
 }
 
 /* Download button */
@@ -113,22 +112,23 @@ footer a:hover {
 
 #download button {
    font: inherit;
-   background: #333;
-   color: #f2b261;
-   border: none;
+   background: var(--text);
+   color: var(--bg);
+   border: 1px solid var(--text);
    padding: 6px 14px;
    cursor: pointer;
 }
 
 #download button:hover {
-   background: #222;
+   background: var(--bg);
+   color: var(--text);
 }
 
 @media print {
    @page { margin: 0; }
-   body { padding: 0; background: #f7e8d5; }
+   body { padding: 0; background: var(--bg); }
    #download { display: none; }
-   #resume { box-shadow: none; max-width: none; }
+   #resume { border: none; max-width: none; }
    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
    </style>
